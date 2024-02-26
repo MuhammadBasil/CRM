@@ -5,10 +5,8 @@ void main() {
   print("Welcome to the Mobile Repair Managment System");
   if (login()) {
     print("Login Successful");
-    var mobileRepairs =
-        <RepairRequest>[]; // Create the repairRequests list here
-    displayMainMenu(
-        mobileRepairs); // Pass repairRequests list to displayMainMenu
+    var mobileRepairs = <RepairRequest>[];
+    displayMainMenu(mobileRepairs);
   } else {
     print("Login Failed. Exiting...");
   }
@@ -45,7 +43,6 @@ void updateRepairStatus(List<RepairRequest> mobileRepairs) {
     print('No repair requests found.');
     return;
   }
-
   viewRepairRequests(mobileRepairs);
 
   stdout.write('Enter index of repair request to update: ');
